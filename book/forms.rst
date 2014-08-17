@@ -1767,6 +1767,13 @@ section.
 
 .. index::
    single: Forms; With no class
+   
+.. caution::
+
+    Pages with CSRF tokens aren't cachable, since the token is specific for 
+    each user. If you want to put a form on a high traffic page that needs
+    caching, you can render the CSRF field using AJAX or ESI.
+    
 
 Using a Form without a Class
 ----------------------------
